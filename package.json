@@ -1,0 +1,53 @@
+{
+  "name": "dataproc",
+  "version": "1.0.0",
+  "author": "Rohit Singh <rohsins@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "main": "./dist/dataproc.cjs",
+  "module": "./dist/dataproc.js",
+  "types": "./dist/dataproc.d.ts",
+  "exports": {
+    ".": {
+      "require": {
+        "types": "./dist/dataproc.d.ts",
+        "default": "./dist/dataproc.cjs"
+      },
+      "import": {
+        "types": "./dist/dataproc.d.ts",
+        "default": "./dist/dataproc.js"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^20.19.2",
+    "mocha": "^10.8.2",
+    "ts-node": "^10.9.2"
+  },
+  "scripts": {
+    "test": "mocha --exit ./_test_/test.spec.ts",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohsins/dataproc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rohsins/dataproc/issues"
+  },
+  "description": "DataProc is a JavaScript library for transforming JSON object - flattening and unflattening.",
+  "homepage": "https://github.com/rohsins/dataproc#readme",
+  "keywords": [
+    "flatten",
+    "unflatten"
+  ]
+}
