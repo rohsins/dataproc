@@ -41,19 +41,21 @@ import { flatten, unflatten } from "dataproc";
 import { flatten, unflatten } from "dataproc";
 
 const obj = {
-        nestedObject1: {
-            nestedObject2: {
-                nestedObject3: {
-                    array: [
+    nestedObject1: {
+        nestedObject2: {
+            nestedObject3: {
+                array: [
+                    {
                         parameter1: {
                             name: "param1",
                             value: "value0"
                         }
-                    ]
-                }
+                    }
+                ]
             }
         }
     }
+}
 
 const flattenedObject = flatten(obj);
 const unflattenedObject = unflatten(flattenedObject);
